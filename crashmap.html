@@ -23,7 +23,7 @@
         map = new google.maps.Map(document.getElementById('map_canvas'),
             mapOptions);
         google.maps.event.addListener(map, 'click', function() {
-          latLng = new google.maps.LatLng(latLng.lat, latLng.lng, false)
+          var latLng = new google.maps.LatLng(latLng.lat, latLng.lng, false)
           window.alert("latLng.lat");
         });
       }
