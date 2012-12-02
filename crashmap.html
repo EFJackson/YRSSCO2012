@@ -25,11 +25,11 @@
             mapOptions);
         google.maps.event.addListener(map, 'click', function() {
           var latLngVars = {
-            lat: latLng.lat,
-            lng: latLng.lng
+            lat: event.latLng.lat,
+            lng: event.latLng.lng
           };
           alert(latLng.lat);
-          alert(latLng.lat);
+          alert(latLng.lng);
         });
       }
 
