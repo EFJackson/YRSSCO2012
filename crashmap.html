@@ -23,16 +23,13 @@
         };
         map = new google.maps.Map(document.getElementById('map_canvas'),
             mapOptions);
-        google.maps.event.addListener(map, 'click', function() {
-          lat = event.latLng.lat;
-          lng = event.latLng.lng;
-          var latLngVars = {
-            lat: lat,
-            lng: lng
-          };
-          alert(latLng.lat);
-          alert(latLng.lng);
-        });
+        google.maps.event.addListener(map, 'click', function(mousevent) {
+          var marker = new google.maps.Marker{
+            position: mousevent.latLng,
+            map: map,
+            title:"Hello World!"
+          }
+        })
       }
 
       google.maps.event.addDomListener(window, 'load', initialize);
